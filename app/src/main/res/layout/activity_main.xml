@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment"
+        android:name="com.amir.dev.demo_cloud_anchor.CustomArFragment"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_above="@+id/open"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="enter Name"
+            android:id="@+id/anchor_name"
+            android:textSize="14sp"
+            android:textColor="#fff" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="enter  Description"
+            android:id="@+id/anchor_desc"
+            android:textSize="14sp"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open Map"
+        android:id="@+id/open"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:onClick="OpenMapActivity_Click"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete All Data"
+        android:id="@+id/delete"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:onClick="deleteData_Click"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="setup alg"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/addparent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/delete"
+        android:onClick="saveAnchorParents_Click"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+
+</RelativeLayout>
